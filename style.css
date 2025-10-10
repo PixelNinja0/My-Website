@@ -27,60 +27,90 @@ body
     padding: 10px 10%;
 }
 
-nav
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/* ===== NAVIGATION ===== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+  position: relative;
+  z-index: 1000;
 }
 
-.logo
-{
-    width: 140px;
+.logo {
+  width: 140px;
+  cursor: pointer;
 }
-nav ul
-{
-    position: absolute;
+
+/* Desktop Menü */
+#sidemenu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  background-color: #fbfbfb;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px 20px;
+}
+
+#sidemenu a {
+  color: #080808;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+#sidemenu a:hover {
+  color: #0C5743;
+}
+
+/* Burger & Close Buttons */
+#openMenu,
+#closeMenu {
+  display: none;
+  color: #080808;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  #sidemenu {
+    position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    display: flex;
-    gap: 10px;
-    margin-top: 25px;
-    background-color: rgb(251, 253, 255);
-}
-
-nav ul li
-{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a
-{
-    color: #080808;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after
-{
-    content: '';
-    width: 0;
-    height: 3px;
+    right: -250px;
+    width: 200px;
+    height: 100vh;
     background: #0C5743;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.3s ease;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #sidemenu.active {
+    right: 0;
+  }
+
+  #sidemenu a {
+    color: white;
+    font-size: 18px;
+  }
+
+  #openMenu {
+    display: block;
+  }
+
+  #closeMenu {
+    display: block;
     position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after
-{
-    width: 100%;
+    top: 20px;
+    right: 20px;
+    color: white;
+  }
 }
 
 .header-text
@@ -517,7 +547,8 @@ nav .fa-solid
         cursor: pointer;
     }
 
-    nav ul {
+    nav ul 
+    {
         background-color: #0C5743;
         position: fixed;
         top: 0;
@@ -530,6 +561,7 @@ nav .fa-solid
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
     }
 
     nav ul li {

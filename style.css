@@ -28,7 +28,8 @@ body
 }
 
 /* ===== NAVIGATION ===== */
-nav {
+nav 
+{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,13 +38,15 @@ nav {
   z-index: 1000;
 }
 
-.logo {
+.logo 
+{
   width: 140px;
   cursor: pointer;
 }
 
 /* Desktop Menü */
-#sidemenu {
+#sidemenu 
+{
   display: flex;
   list-style: none;
   gap: 30px;
@@ -53,20 +56,23 @@ nav {
   padding: 8px 20px;
 }
 
-#sidemenu a {
+#sidemenu a 
+{
   color: #080808;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
 }
 
-#sidemenu a:hover {
+#sidemenu a:hover 
+{
   color: #0C5743;
 }
 
 /* Burger & Close Buttons */
 #openMenu,
-#closeMenu {
+#closeMenu 
+{
   display: none;
   color: #080808;
   font-size: 26px;
@@ -74,8 +80,10 @@ nav {
 }
 
 /* ===== MOBILE VIEW ===== */
-@media (max-width: 768px) {
-  #sidemenu {
+@media (max-width: 768px) 
+{
+  #sidemenu 
+  {
     position: fixed;
     top: 0;
     right: -250px;
@@ -91,20 +99,24 @@ nav {
     box-shadow: none;
   }
 
-  #sidemenu.active {
+  #sidemenu.active 
+  {
     right: 0;
   }
 
-  #sidemenu a {
+  #sidemenu a 
+  {
     color: white;
     font-size: 18px;
   }
 
-  #openMenu {
+  #openMenu 
+  {
     display: block;
   }
 
-  #closeMenu {
+  #closeMenu 
+  {
     display: block;
     position: absolute;
     top: 20px;
@@ -112,6 +124,7 @@ nav {
     color: white;
   }
 }
+
 
 .header-text
 {
@@ -450,7 +463,7 @@ form .btn2
     margin-top: 20px;
 }
 /*-------------Portfolio1---------------------*/
-/* Styles für die Projekt-Detailseite */
+
 .project-container 
 {
     display: flex;
@@ -462,8 +475,9 @@ form .btn2
     align-items: flex-start;
 }
 
-.project-image img {
-    max-width: 450px; /* Bildgröße */
+.project-image img 
+{
+    max-width: 450px; 
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
@@ -475,33 +489,38 @@ form .btn2
     color: #898989;
 }
 
-.project-content h1 {
+.project-content h1 
+{
     margin-top: 0;
-    margin-bottom: 20px; /* Abstand nach Überschrift */
+    margin-bottom: 20px; 
     font-size: 28px;
     color: #000000;
 
 }
 
-.project-content h2 {
-    margin-top: 30px; /* Abstand vor Unterüberschrift */
-    margin-bottom: 15px; /* Abstand nach Unterüberschrift */
+.project-content h2 
+{
+    margin-top: 30px; 
+    margin-bottom: 15px; 
     font-size: 20px;
     color: #000000;
 }
 
-.project-content p {
-    font-size: 15px; /* Textgröße etwas kleiner */
+.project-content p 
+{
+    font-size: 15px; 
     margin-bottom: 15px;
 }
 
-.project-content ul {
+.project-content ul 
+{
     padding-left: 20px;
-    font-size: 15px; /* Listentext kleiner */
+    font-size: 15px; 
     margin-bottom: 15px;
 }
 
-.github-button {
+.github-button 
+{
     display: inline-block;
     margin-top: 25px;
     padding: 12px 24px;
@@ -512,7 +531,8 @@ form .btn2
     transition: background-color 0.3s;
 }
 
-.github-button:hover {
+.github-button:hover 
+{
     background-color: #555;
 }
 
@@ -520,96 +540,168 @@ form .btn2
 
 nav .fa-solid 
 {
-    display: none;
+  display: none;
 }
 
-@media only screen and (max-width: 600px) {
-    /* Header */
-    #header {
-        background-image: url('images/slash.jpg');
-        background-size: cover;
-    }
+/* --- Mobile View --- */
+@media only screen and (max-width: 600px) 
+{
 
-    .header-text {
-        margin-top: 100%;
-        font-size: 16px;
-    }
+  
+  #header 
+  {
+    background-image: url('images/slash.jpg');
+  }
 
-    .header-text h1 {
-        font-size: 30px;
-    }
+  .header-text 
+  {
+    margin-top: 100%;
+    font-size: 16px;
+  }
 
-    /* Navbar */
-    nav .fa-solid {
-        display: block;
-        color: white;
-        font-size: 25px;
-        cursor: pointer;
-    }
+  .header-text h1 
+  {
+    font-size: 30px;
+  }
 
-    nav ul 
-    {
-        background-color: #0C5743;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-    }
+  /* --- Burger Icon sichtbar machen --- */
+  nav .fa-solid 
+  {
+    display: block;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
 
-    nav ul li {
-        list-style: none;
-        margin: 25px 0;
-    }
+  /* --- Seitenmenü --- */
+  #sidemenu 
+  {
+    background-color: #0C5743;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    nav ul li a {
-        color: white;
-        font-size: 18px;
-        text-decoration: none;
-    }
+  #sidemenu li 
+  {
+    display: block;
+    margin: 25px 0;
+  }
 
-    nav ul .fa-circle-xmark {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-        color: white;
-    }
+  #sidemenu a 
+  {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
 
-    /* Layout Anpassungen */
-    .sub-title {
-        font-size: 40px;
-    }
+  #sidemenu .fa-circle-xmark 
+  {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
 
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
-    }
+  .sub-title 
+  {
+    font-size: 40px;
+  }
 
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
+  .about-col-1,
+  .about-col-2 
+  {
+    flex-basis: 100%;
+  }
 
-    .about-col-2 {
-        font-size: 14px;
-    }
+  .about-col-1 
+  {
+    margin-bottom: 30px;
+  }
 
-    .tab-links {
-        font-size: 16px;
-        margin-right: 20px;
-    }
+  .about-col-2 
+  {
+    font-size: 14px;
+  }
 
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-    }
+  .tab-links 
+  {
+    font-size: 16px;
+    margin-right: 20px;
+  }
 
-    .copyright {
-        font-size: 14px;
-    }
+  .contact-left,
+  .contact-right 
+  {
+    flex-basis: 100%;
+  }
+
+  .copyright 
+  {
+    font-size: 14px;
+  }
+  .header-text 
+  {
+    position: relative;
+    top: -150px; /* passe -50px ggf. auf -40 oder -60 an, je nach Geschmack */
+  }
+}
+/* =========================
+   Desktop: Menü horizontal zentrieren
+   ========================= */
+
+@media (min-width: 769px) 
+{
+  /* Stelle sicher, dass nav als Bezugspunkt dient */
+  nav 
+  {
+    position: relative; /* wichtig für die absolute Positionierung des Menüs */
+  }
+
+  /* Desktop: Menü absolut in der Mitte über der Seite platzieren */
+  #sidemenu 
+  {
+    position: absolute;
+    left: 50%;
+    top: 25px;                 /* Abstand von oben (anpassen wenn nötig) */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 8px 20px;
+    z-index: 50;
+  }
+
+  /* Auf Desktop die Mobile-Icons ausblenden */
+  #openMenu,
+  #closeMenu,
+  nav .fa-bars,
+  nav .fa-circle-xmark,
+  nav .fa-solid {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) 
+{
+  #about img, 
+  .about-content img, 
+  .about-section img {
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    position: relative;
+    left: 0;
+    transform: none;
+  }
 }

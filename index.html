@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+  <img src="Bilder/Logo_Website.png" class="logo">
+
+  <ul id="sidemenu">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+  </ul>
+
+  <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+        <div class="header-text">
+            <p>Hi, I'm <span>Liam</span></p>
+            <h1>Student for <span>Engineering and psychologie</span></h1>
+        </div>
+    </div>
+    <img src="Bilder/IPsy.JPG" class="header-bg">
+</div>
+<!--------about--------->
+ <div id="about">
+    <div class="container">
+        <h1 class="sub-title">About Me</h1>
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Bilder\DSC_8730.jpg">
+            </div>
+            <div class="about-col-2">
+                <p class="text">
+                    Hey! I'm Liam, a student of Engineering Psychology at Furtwangen University, driven by the connection between humans and technology.<br><br>
+                    My work is fueled by curiosity, creativity, and the will to build meaningful digital experiences. I’m currently expanding my skills in UI/UX design, web development, and artificial intelligence.<br><br>
+                    With a background in hands-on engineering and a growing passion for cognitive science and human-centered design, I strive to bring psychology and tech together – whether it’s through smart interfaces, creative side projects, or future-oriented startups.<br><br>
+                    Right now, I'm building my portfolio, working on personal projects, and preparing for an internship in a city like Berlin or Hamburg. I'm open to collaborations, internships, and inspiring connections.
+                </p>
+                <hr class="section-break">
+
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experiences')">Experiences</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java/Python</li>
+                        <li><span>Web Development</span><br>HTML/CSS/Javascript</li>
+                        <li><span>Statistics</span><br>Jasp/R</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experiences">
+                    <ul>
+                        <li><span>2017 - 2021</span><br>metall fabrication mechanic</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2022 - aktuell</span><br>B.Sc. Engineering Psychology</li>
+                        <li><span>2017 - 2021</span><br>vocational training as industrial mechanic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-------Profecinices-------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Proficiencies</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>User Research</h2>
+                <p>I use structured user research methods to uncover real needs, pain points, and mental models. From interviews and surveys to usability tests, I translate human insights into product decisions that truly matter. My background in engineering psychology helps me bridge the gap between users and technology.</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>I focus on designing interfaces that not only look good but feel intuitive. Using principles like LATCH and CARP, I create user flows that align with cognitive patterns and user expectations. I work with tools like Figma and always iterate based on feedback and usability insights.</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>AI & Automation</h2>
+               <p>I’m fascinated by the intersection of psychology and artificial intelligence. My goal is to create systems that feel intelligent and human-aware – whether it's through small-scale automation tools or exploratory AI concepts. I'm currently exploring Python and machine learning frameworks to bring these ideas to life.</p>
+                    <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------Portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="Bilder/Design.png" class="KI-img">
+                <div class="layer">
+                    <h3>AI document reader</h3>
+                    <a href="portfolio1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Bilder/Coming soon.png">
+                <div class="layer">
+                    <h3>User Context Analysis for Digital Services</h3>
+                    <a href="#https://github.com/PixelNinja0/AI-PDF-Reader"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Bilder/coming soon.png">
+                <div class="layer">
+                    <h3>Ema work Designer Projekt</h3>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="worklist more-projects hidden">
+            <div class="work">...</div>
+            <div class="work">...</div>
+            <div class="work">...</div>
+        </div>
+        <a href="#" class="btn" id="seeMoreBtn" onclick="showMoreProjects()">See more</a>
+    </div>
+</div>
+<!---------contact---------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>Liam.dhl@proton.me</p>
+                <p><i class="fa-solid fa-phone"></i>01774547940</p>
+                <div class="div social-icons">
+                    <a href="www.linkedin.com/in/liam-dahl-a2b288335"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+             <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+             </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <a href="datenschutz.html" id="privacy-btn">Datenschutz</a>
+        <a href="impressum.html" id="impressum-btn">Impressum</a>
+        <p>Copyright @ Liam</p>
+    </div>
+</div>
+
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+     
+    function showMoreProjects() 
+    {
+         event.preventDefault();
+        const moreProjects = document.querySelector('.more-projects');
+        const btn = document.getElementById('seeMoreBtn');
+  
+            if (moreProjects.classList.contains('hidden')) 
+            {
+                moreProjects.classList.remove('hidden');
+                btn.textContent = "Show less";
+            } 
+            else 
+            {
+                moreProjects.classList.add('hidden');
+                btn.textContent = "See more";
+            }
+        }
+
+ </script>
+
+ <script>
+  var sidemenu = document.getElementById("sidemenu");
+
+  function openmenu() 
+  {
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu() {
+    sidemenu.style.right = "-200px";
+  }
+</script>
+
+</body>
+</html>
